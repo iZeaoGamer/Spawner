@@ -1,6 +1,6 @@
 <?php
 
-namespace spawner;
+namespace Karanpatel567;
 
 use pocketmine\block\Block;
 use pocketmine\command\{Command, CommandSender};
@@ -73,6 +73,7 @@ class PTask extends PluginTask{
      break;
     case "squid":
      $tile->setEntityId(17);
+     break;
    }
   }
  }
@@ -107,7 +108,7 @@ class Main extends PluginBase implements Listener{
     
     }
     
-    public function onCommand(CommandSender $s, Command $cmd, $label, array $args) {
+    public function onCommand(CommandSender $s, Command $cmd, string $label, array $args): bool {
       
       if($cmd->getName() == "spawner") {
         
@@ -175,7 +176,7 @@ class Main extends PluginBase implements Listener{
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §e Cow Spawner!");
                  } else {
-                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("cow") ."$");
+                   $s->sendMessage("§c» You don't have enough money! Spawner Cost: §a". $this->cfg->get("cow") ."$");
                    }
                   break;
                   
