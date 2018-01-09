@@ -275,7 +275,7 @@ class Main extends PluginBase implements Listener{
                    }
                   break;
                   
-               case "skeleton":
+            case "skeleton":
               
                $pmoney = $this->eco->myMoney($s->getName());
                
@@ -455,10 +455,10 @@ class Main extends PluginBase implements Listener{
               $item->setCustomName("§r§dSquid Spawner");
               $player->getInventory()->addItem($item);
               break;
+               }
               }
              }
-            }
-          }
-        }
-      }
-    }
+           }
+         }
+       }
+     }
