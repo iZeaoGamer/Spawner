@@ -42,7 +42,7 @@ class PTask extends PluginTask{
   *
   * @return void
   */
- public function onRun(int $tick){
+ public function onRun(int $tick): void{
   $tile = $this->block->getLevel()->getTile(new Vector3($this->block->getX(), $this->block->getY(), $this->block->getZ()));
   if($tile instanceof MobSpawner) {
    echo "Translating to {$this->type}...";
