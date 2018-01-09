@@ -165,9 +165,9 @@ class Main extends PluginBase implements Listener{
               
                $pmoney = $this->eco->myMoney($s->getName());
                
-               $this->eco->reduceMoney($s->getName(), $this->cfg->get("cow"));
-               
                if($pmoney >= $this->cfg->get("cow")) {
+               
+               $this->eco->reduceMoney($s->getName(), $this->cfg->get("cow"));
                  
                  $spawnblock = Item::get(52, 0, 1);
                  
