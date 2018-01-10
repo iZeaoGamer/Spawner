@@ -50,6 +50,7 @@ class Main extends PluginBase implements Listener{
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args): bool {
       
       if($cmd->getName() == "spawner") {
+       return true;
         
         if(isset($args[0])) {
           
@@ -57,6 +58,7 @@ class Main extends PluginBase implements Listener{
             foreach($this->cfg->getAll() as $key => $val) {
               
               $s->sendMessage("§d» §b". $key .": §e". $val);
+             return true;
               }
             }
             
@@ -73,11 +75,14 @@ class Main extends PluginBase implements Listener{
                  $spawnblock = Item::get(52, 0, 1);
                  
                  $spawnblock->setCustomName("§r§dSquid Spawner");
+                 return true;
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» §aYou have bought a§e Squid Spawner!");
+                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("squid") ."$");
+                   return true;
                    }
                   break;
                   
@@ -95,8 +100,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("chicken") ."$");
+                return true;
                    }
                   break;
                   
@@ -114,8 +121,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("cow") ."$");
+                return true;
                    }
                   break;
                   
@@ -133,8 +142,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §ePig Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pig") ."$");
+                return true;
                    }
                   break;
                   
@@ -152,8 +163,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eBlaze Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("blaze") ."$");
+                return true;
                    }
                   break;
                   
@@ -171,8 +184,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eIron Golem Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("iron_golem") ."$");
+                return true;
                    }
                   break;
                   
@@ -190,8 +205,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §ePigMan Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pigman") ."$");
+                return true;
                    }
                   break;
                   
@@ -209,8 +226,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eSpider Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money, Spawner Cost: §a". $this->cfg->get("spider") ."$");
+                return true;
                    }
                   break;
                   
@@ -228,8 +247,10 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a  §eSkeleton Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("skeleton") ."$");
+                return true;
                    }
                   break;
                   
@@ -247,13 +268,16 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eZombie Spawner!");
+                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("zombie") ."§a$");
+                return true;
                    }
                   break;
                 }
               } else {
                 $s->sendMessage("Use: /spawner <mob>");
+         return true;
                 }
               }
             }
