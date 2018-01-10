@@ -3,6 +3,7 @@
 namespace Karanpatel567;
 
 use pocketmine\scheduler\PluginTask;
+use pocketmine\tile\MobSpawner;
 
 class PTask extends PluginTask {
  
