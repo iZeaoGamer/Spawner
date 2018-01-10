@@ -50,12 +50,13 @@ class Main extends PluginBase implements Listener{
     public function onCommand(CommandSender $s, Command $cmd, string $label, array $args): bool {
       
       if($cmd->getName() == "spawner") {
-       return true;
         
         if(isset($args[0])) {
+         return true;
           
           if(strtolower($args[0]) == "list") {
             foreach($this->cfg->getAll() as $key => $val) {
+             return true;
               
               $s->sendMessage("§d» §b". $key .": §e". $val);
              return true;
