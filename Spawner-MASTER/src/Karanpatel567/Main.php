@@ -9,7 +9,6 @@ use pocketmine\event\Listener;
 use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
-use pocketmine\tile\MobSpawner;
 use pocketmine\utils\Config;
 
 use onebone\economyapi\EconomyAPI;
