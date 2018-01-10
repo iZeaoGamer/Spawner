@@ -87,9 +87,6 @@ class Main extends PluginBase implements Listener{
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("squid") ."$");
                    }
                   return true;
-                 } else {
-                  $s->sendMessage(TextFormat::RED . "Please use this command in-game.");
-                  return true;
                   break;
                   
             case "chicken":
