@@ -277,10 +277,11 @@ class Main extends PluginBase implements Listener{
                 }
               } else {
                 $s->sendMessage("Use: /spawner <mob>");
+             return true;
                 }
+                break;
               }
             }
-         return true;
  
         public function onPlace(BlockPlaceEvent $ev) {
           $p = $ev->getPlayer();
