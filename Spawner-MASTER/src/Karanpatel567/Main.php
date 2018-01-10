@@ -157,7 +157,7 @@ class Main extends PluginBase implements Listener{
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
                  } else {
-                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get('chicken") ."$");
+                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("chicken") ."$");
                    }
                   break;
                   
@@ -165,18 +165,18 @@ class Main extends PluginBase implements Listener{
               
                $pmoney = $this->eco->myMoney($s->getName());
                
-               if($pmoney >= $this->cfg->get("cow")) {
-               
-               $this->eco->reduceMoney($s->getName(), $this->cfg->get("cow"));
+               if($pmoney >= $this->cfg->get("chicken")) {
+                 
+                 $this->eco->reduceMoney($s->getName(), $this->cfg->get("cow"));
                  
                  $spawnblock = Item::get(52, 0, 1);
                  
                  $spawnblock->setCustomName("§r§dCow Spawner");
                  
                  $s->getInventory()->addItem($spawnblock);
-                 $s->sendMessage("§a» You have bought a §e Cow Spawner!");
+                 $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
                  } else {
-                   $s->sendMessage("§c» You don't have enough money! Spawner Cost: §a". $this->cfg->get("cow") ."$");
+                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("cow") ."$");
                    }
                   break;
                   
