@@ -9,6 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
+use pocketmine\tile\MobSpawner;
 use pocketmine\utils\Config;
 
 use onebone\economyapi\EconomyAPI;
@@ -55,8 +56,9 @@ class Main extends PluginBase implements Listener{
          return true;
           
           if(strtolower($args[0]) == "list") {
+           return true;
+           
             foreach($this->cfg->getAll() as $key => $val) {
-             return true;
               
               $s->sendMessage("§d» §b". $key .": §e". $val);
              return true;
@@ -83,8 +85,8 @@ class Main extends PluginBase implements Listener{
                  return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("squid") ."$");
-                   return true;
                    }
+                  return true;
                   break;
                   
             case "chicken":
@@ -104,15 +106,15 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("chicken") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "cow":
               
                $pmoney = $this->eco->myMoney($s->getName());
                
-               if($pmoney >= $this->cfg->get("chicken")) {
+               if($pmoney >= $this->cfg->get("cow")) {
                  
                  $this->eco->reduceMoney($s->getName(), $this->cfg->get("cow"));
                  
@@ -121,12 +123,12 @@ class Main extends PluginBase implements Listener{
                  $spawnblock->setCustomName("§r§dCow Spawner");
                  
                  $s->getInventory()->addItem($spawnblock);
-                 $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
+                 $s->sendMessage("§a» You have bought a§e Cow Spawner!");
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("cow") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "pig":
@@ -146,8 +148,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pig") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "blaze":
@@ -167,8 +169,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("blaze") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "iron_golem":
@@ -188,8 +190,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("iron_golem") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "pigman":
@@ -209,8 +211,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pigman") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "spider":
@@ -230,8 +232,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money, Spawner Cost: §a". $this->cfg->get("spider") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "skeleton":
@@ -251,8 +253,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("skeleton") ."$");
-                return true;
                    }
+                  return true;
                   break;
                   
             case "zombie":
@@ -272,8 +274,8 @@ class Main extends PluginBase implements Listener{
                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("zombie") ."§a$");
-                return true;
                    }
+                  return true;
                   break;
                 }
               } else {
