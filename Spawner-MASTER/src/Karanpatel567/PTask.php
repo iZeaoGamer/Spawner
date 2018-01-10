@@ -28,7 +28,7 @@ class PTask extends PluginTask {
  public function onRun(int $tick): void{
   $tile = $this->block->getLevel()->getTile(new Vector3($this->block->getX(), $this->block->getY(), $this->block->getZ()));
   if($tile instanceof MobSpawner) {
-   echo "Translating to {$this->type}...";
+   $plugin->getLogger()->info("Translating to {$this->type}...");
    switch($this->type){
     case "zombie":
      $tile->setEntityId(32);
