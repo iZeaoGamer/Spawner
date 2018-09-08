@@ -78,11 +78,9 @@ class Main extends PluginBase implements Listener{
                  $spawnblock = Item::get(52, 0, 1);
                  
                  $spawnblock->setCustomName("§r§dSquid Spawner");
-                 return true;
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» §aYou have bought a§e Squid Spawner!");
-                 return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("squid") ."$");
                    }
@@ -103,7 +101,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("chicken") ."$");
                    }
@@ -124,7 +121,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Cow Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("cow") ."$");
                    }
@@ -145,7 +141,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §ePig Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pig") ."$");
                    }
@@ -166,7 +161,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eBlaze Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("blaze") ."$");
                    }
@@ -187,7 +181,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eIron Golem Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("iron_golem") ."$");
                    }
@@ -208,7 +201,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §ePigMan Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("pigman") ."$");
                    }
@@ -229,7 +221,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eSpider Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money, Spawner Cost: §a". $this->cfg->get("spider") ."$");
                    }
@@ -250,7 +241,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a  §eSkeleton Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("skeleton") ."$");
                    }
@@ -271,7 +261,6 @@ class Main extends PluginBase implements Listener{
                  
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a §eZombie Spawner!");
-                return true;
                  } else {
                    $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("zombie") ."§a$");
                    }
@@ -297,58 +286,58 @@ class Main extends PluginBase implements Listener{
               
               case "§r§dZombie Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "zombie"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "zombie"), 20);
                 break;
               case "§r§dSkeleton Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "skeleton"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "skeleton"), 20);
                 break;
               
               case "§r§dSpider Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "spider"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "spider"), 20);
                 break;
               
               case "§r§dPigman Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "pigman"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "pigman"), 20);
                 break;
                 
               case "§r§dIron Golem Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "iron_golem"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "iron_golem"), 20);
                 break;
                 
               case "§r§dBlaze Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "blaze"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "blaze"), 20);
                 break;
               
               case "§r§dPig Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "pig"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "pig"), 20);
                 break;
               
               case "§r§dCow Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "cow"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "cow"), 20);
                 break;
                 
               case "§r§dChicken Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "chicken"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "chicken"), 20);
                 break;
                 
               case "§r§dSquid Spawner":
               
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "squid"), 20);
+                $this->getScheduler()->scheduleDelayedTask(new PTask($this, $block, "squid"), 20);
                 break;
                }
              }
            }
            
            public function onBreak(BlockBreakEvent $ev) {
-           if (!$event->isCancelled()){
+           if (!$ev->isCancelled()){
            $block = $ev->getBlock();
            $player = $ev->getPlayer();
            $tile = $player->getLevel()->getTile($block);
