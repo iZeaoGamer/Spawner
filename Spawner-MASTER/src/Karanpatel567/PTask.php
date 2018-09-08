@@ -2,7 +2,7 @@
 
 namespace Karanpatel567;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use CortexPE\tile\MobSpawner;
 
 class PTask extends PluginTask {
@@ -14,7 +14,7 @@ class PTask extends PluginTask {
  /** @var string */
  public $type;
  
- public function __construct(Main $plugin, Block $block, string $type);
+ public function __construct(Main $plugin, Block $block, string $type){
   $this->plugin = $plugin;
   $this->block = $block;
   $this->type = $type;
