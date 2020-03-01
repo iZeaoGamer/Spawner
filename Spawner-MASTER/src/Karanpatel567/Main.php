@@ -156,7 +156,7 @@ class Main extends PluginBase implements Listener{
                  $s->getInventory()->addItem($spawnblock);
                  $s->sendMessage("§a» You have bought a§e Chicken Spawner!");
                  } else {
-                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get('chicken") ."$");
+                   $s->sendMessage("§c» You don't have enough money!, Spawner Cost: §a". $this->cfg->get("chicken") ."$");
                    }
                   break;
                   
